@@ -47,3 +47,34 @@ async function buscarMusica(url) {
     }
  
 }
+
+function albunsAleatorio() {
+    buscarAlbum (`${API}/aleatorio`);
+}
+
+function buscarPorMusica() {
+    const musica = breedInput.ariaValueMax.trim().toLowerCase();
+ 
+    if (!musica) {
+        alert ("Digite uma música!")
+
+        return;
+    }
+
+    buscarAlbum(`${API}/${musica}`)
+}
+
+randomBtn.addEventListener("click", albunsAleatorio)
+
+searchBtn.addEventListener("click", buscarPorMusica)
+
+albunsImage.addEventListener("click", albunsAleatorio);
+
+breedInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        
+        buscarPorMusica();
+    }
+})
+
+albunsAleatorio()
