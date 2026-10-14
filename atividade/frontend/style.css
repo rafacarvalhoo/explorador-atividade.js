@@ -113,16 +113,8 @@ input {
 .loading::after {
     content: "Carregando...";
     position: absolute;
-
-    /* fundo preto */
     background: black;
-
-    /* cor do texto */
     color: white;
-
-    /* espaço interno */
     padding: 10px 20px;
-
-    /* borda arredondada */
     border-radius: 20px;
 }
